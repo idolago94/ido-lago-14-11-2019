@@ -1,0 +1,53 @@
+@import 'src/app/helpers/style.scss';
+
+.box {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+
+        .weather-box {
+            color: $text-color;
+            display: flex;
+            padding: 10px;
+            border-radius: 10px;
+            width: 95%;
+            background-color: $weahter-background;
+            justify-content: space-around;
+        
+            .title {
+                display: flex;
+                align-items: center;
+
+                .title-box {
+
+                    .location-name {
+                        font-size: 2rem;
+                        font-weight: bold;
+                    }
+
+                    .time {
+                        margin-left: 20px;
+                        font-size: .8rem;
+                    }
+                }
+                
+            }
+
+            .temperature {
+                font-size: 5rem;
+                padding: 20px;
+                font-weight: bold;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+    }
+
+    .star {
+        position: absolute;
+        height: 23px;
+        right: 3.5%;
+        top: 7%;
+    }
+}

@@ -1,0 +1,54 @@
+@import 'src/app/helpers/style.scss';
+
+.box {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+
+    .search-box {
+        width: 90%;
+        display: flex;
+
+        .input {
+            flex-grow: 1;
+            background-color: $input-background;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border: none;
+            padding: 10px;
+        }
+
+        .icon {
+            background-color: $input-background;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            height: 40px;
+            padding: 10px;
+            cursor: pointer;
+        }
+    }
+}
+
+.box.open-results {
+
+    .search-box .input {
+        border-bottom-left-radius: 0;
+    }
+
+    .search-box .icon {
+        border-bottom-right-radius: 0;
+    }
+}
+
+.results-box {
+    display: flex;
+    justify-content: center;
+
+    .content-box {
+        width: 90%;
+        background-color: $input-background;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        padding: 10px;
+    }
+}

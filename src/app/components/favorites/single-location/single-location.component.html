@@ -1,0 +1,7 @@
+<div class="location">
+  <div class="content-box">
+    <div class="name">{{locationDetails.name}}</div>
+    <div *ngIf="currentWeather" class="weather">{{currentWeather.temperature | temperature: settings.unit}}</div>
+    <img *ngIf="!currentWeather" [src]="loaderIcon" class="loader">
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="box" [class.open-results]="allResults">
+  <div class="search-box">
+    <input  (keyup)="search()" #inputSearch type="text" class="input">
+    <img (click)="clearInput()" [src]="inputIcon" class="icon">
+  </div>
+</div>
+<div *ngIf="allResults" class="results-box">
+  <div class="content-box">
+    <!-- <div (click)="resultSelect(result)" *ngFor="let result of allResults" class="result">
+      <div class="result-name">{{result.name}}</div>
+    </div> -->
+    <app-result [details]="result" (click)="resultSelect(result)" *ngFor="let result of allResults"></app-result>
+  </div>
+</div>

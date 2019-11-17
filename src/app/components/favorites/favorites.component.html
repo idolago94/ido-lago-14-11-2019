@@ -1,0 +1,11 @@
+<div class="box">
+  <div *ngIf="favouriteList.length>0" class="list-box">
+    <app-single-location (click)="locationSelect(location)" *ngFor="let location of favouriteList" [locationDetails]="location" ></app-single-location>
+  </div>
+  <div *ngIf="favouriteList.length==0" class="no-list">
+    <div class="massege">
+      Your favourite list is empty.
+    </div>
+    <img [src]="alertIcon" class="alert">
+  </div>
+</div>

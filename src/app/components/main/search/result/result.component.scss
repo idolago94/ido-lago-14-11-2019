@@ -1,0 +1,19 @@
+.result {
+    padding: 10px;
+    border-bottom: 1px solid gray;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        background-color: rgba(150, 147, 147, 0.699);
+    }
+
+    .yellow-star {
+        height: 19px;
+        margin-right: 5px;
+    }
+
+    .content {
+        font-size: 1rem;
+    }
+}

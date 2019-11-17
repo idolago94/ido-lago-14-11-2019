@@ -1,0 +1,66 @@
+@import 'src/app/helpers/style.scss';
+
+.box {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    .week-box {
+        display: flex;
+        padding: 10px;
+        border-radius: 10px;
+        width: 95%;
+        background-color: $weahter-background;
+        color: $text-color;
+
+        .day {
+            padding: 10px;
+            width: 20%;
+            background-color: rgba(100, 97, 97, 0.61);
+
+            &:not(:first-child) {
+                margin-left: 15px;
+            }
+            
+            .date {
+                text-align: center;
+                font-size: 2rem;
+            }
+
+            .temperature {
+                font-size: 1.3rem;
+                text-align: center;
+                margin: 15px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .box {
+    
+        .week-box {
+            display: block;
+    
+            .day {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+    
+                &:not(:first-child) {
+                    margin-left: 0;
+                    border-top: 1px solid gray;
+                }
+                
+                .date {
+                    font-size: 2rem;
+                }
+    
+                .temperature {
+                    margin: 15px;
+                }
+            }
+        }
+    }
+}

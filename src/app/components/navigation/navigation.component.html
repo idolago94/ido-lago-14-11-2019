@@ -1,0 +1,44 @@
+<div class="nav">
+  <div class="header">
+    <app-logo></app-logo>
+    <div [routerLink]="appRoutes.MAIN" class="btn-box">
+      <img [src]="targetIcon" class="current btn">
+    </div>
+    <div  class="btn-box">
+      <img (click)="settingsClick()" [src]="settingsIcon" class="settings btn">
+      <div *ngIf="openSettings" class="settings-box">
+        <div class="option-box">
+          <div class="label">unit:</div>
+          <app-toggle></app-toggle>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tabs-box">
+    <div class="tab-box"><a [routerLink]="appRoutes.MAIN" class="tab">{{appRoutes.MAIN}}</a></div>
+    <div class="tab-box"><a [routerLink]="appRoutes.FAVOURITE" class="tab">{{appRoutes.FAVOURITE}}</a></div>
+  </div>
+
+  <div class="menu-mobile-box">
+    <img (click)="mobileMenuClick()" *ngIf="!mobileMenuOpen" [src]="menuIcon" class="menu-icon">
+    <div [class.open]="mobileMenuOpen" class="menu-content">
+      <div (click)="mobileMenuClick()" class="background-box"></div>
+      <div class="side-menu">
+        <div class="close-box">
+          <app-logo [mobile]="true"></app-logo>
+          <img (click)="mobileMenuClick()" [src]="closeIcon" class="close">
+        </div>
+      <div class="tabs-box">
+        <div class="tab-box"><a (click)="mobileMenuClick()" [routerLink]="appRoutes.MAIN" class="tab">{{appRoutes.MAIN}}</a></div>
+        <div class="tab-box"><a (click)="mobileMenuClick()" [routerLink]="appRoutes.FAVOURITE" class="tab">{{appRoutes.FAVOURITE}}</a></div>
+      </div>
+      <div class="settings-box">
+        <div class="option-box">
+          <div class="label">unit:</div>
+          <app-toggle></app-toggle>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>

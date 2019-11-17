@@ -1,0 +1,23 @@
+@import 'src/app/helpers/style.scss';
+
+.location {
+    display: flex;
+    justify-content: center;
+
+    .content-box {
+        color: $text-color;
+        text-align: center;
+
+        .name {
+            font-size: 2rem;
+        }
+
+        .weather {
+            font-size: 1.5rem;
+        }
+
+        .loader {
+            height: 27px;;
+        }
+    }
+}

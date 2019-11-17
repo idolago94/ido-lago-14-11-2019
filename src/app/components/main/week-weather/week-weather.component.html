@@ -1,0 +1,13 @@
+<div class="box">
+    <div *ngIf="weekWeather" class="week-box">
+        <div *ngFor="let day of weekWeather" class="day">
+            <div class="date">
+                {{day.dateTime | fullDateTime}}
+            </div>
+            <div class="temperature">
+                {{day.temperature | temperature: settings.unit}} - {{day.maxTemperature | temperature: settings.unit}}
+            </div>
+        </div>
+    </div>
+    <img *ngIf="!weekWeather" [src]="loaderIcon" class="loader">
+</div>
