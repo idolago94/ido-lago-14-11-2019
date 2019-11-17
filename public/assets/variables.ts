@@ -1,0 +1,9 @@
+export const TARGET = 'assets/target.svg';
+export const LOADER = 'assets/loader.svg';
+export const STAR = 'assets/star.svg';
+export const YELLOW_STAR = 'assets/yellow-star.svg';
+export const CLOSE = 'assets/close.svg';
+export const SETTINGS = 'assets/settings.svg';
+export const MENU = 'assets/menu.svg';
+export const ALERT = 'assets/alert.svg';
+export const WEATHER = 'assets/weather.svg';
