@@ -9,7 +9,7 @@ import { ToastService } from './toast.service';
 export class LocationsService {
 
   url: string = 'https://dataservice.accuweather.com/locations/v1';
-  API_KEY: string = 'oM2dep6TrQA07ALL4kxnFdBxdmj10zcy';
+  API_KEY: string = 'Em5cfBiARlZWkSrZOWYm2Buvhk5XAsFB';
 
   constructor( private http: HttpClient ) { }
 

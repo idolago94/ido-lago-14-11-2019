@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 export class WeatherService {
 
   weatherUrl: string = 'https://dataservice.accuweather.com/forecasts/v1';
-  API_KEY: string = 'oM2dep6TrQA07ALL4kxnFdBxdmj10zcy';
+  API_KEY: string = 'Em5cfBiARlZWkSrZOWYm2Buvhk5XAsFB';
 
   constructor( private http: HttpClient ) { }
 
