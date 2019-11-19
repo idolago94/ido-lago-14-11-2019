@@ -30,7 +30,7 @@ export class MainComponent implements OnInit {
   }
 
   findMe() {
-    if (navigator.geolocation) {
+    navigator.geolocation.watchPosition((position) => {
       navigator.geolocation.getCurrentPosition((position) => {
         let currentPosition = {
           lat: position.coords.latitude,
@@ -44,8 +44,9 @@ export class MainComponent implements OnInit {
           this.toastService.handleError(err);
         })
       });
-    } else {
-      alert("Geolocation is not supported by this browser.");
-    }
+    }, 
+    (error) => {
+      this.toastService.handleError(error);
+    });
   }
 }

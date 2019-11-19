@@ -1,2 +1,2 @@
 export const MAIN = 'main';
-export const FAVOURITE = 'favourite';
+export const FAVOURITE = 'favorite';
