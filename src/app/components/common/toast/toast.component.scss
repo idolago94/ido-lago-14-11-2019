@@ -1,0 +1,56 @@
+.toast-box {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+
+    .toast {
+        width: 36%;
+        height: fit-content;
+        background-color: rgb(245, 125, 13);
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px -1px black;
+        position: relative;
+        z-index: 999;
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            animation: showAlert 1s;
+        }
+
+        .content {
+            color: white;
+            font-size: 0.9rem;
+            flex-grow: 1;
+        }
+
+        .alert {
+            width: 10%;
+        }
+    }
+}
+
+@keyframes showAlert {
+    0% {
+        background-color: rgba(236, 231, 231, 0.445);
+    }
+
+    80% {
+        transform: scale(2);
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}

@@ -64,3 +64,9 @@
         }
     }
 }
+
+@media screen and (max-width: 400px) {
+    .box .week-box {
+        width: 100%;
+    }
+}

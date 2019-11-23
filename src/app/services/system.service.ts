@@ -10,14 +10,15 @@ export class SystemService {
 
   settings: ISettings = {
     unit: units.CELSIUS,
-    theme: themes.LIGHT
+    theme: themes.LIGHT,
+    locationPermission: false
   }
 
   constructor() { }
 
   settingsChanged = new Subject();
 
-  getSettings() {
+  getSettings(): ISettings {
     return Object.assign(this.settings);
   }
 
@@ -27,6 +28,11 @@ export class SystemService {
     } else {
       this.settings.unit = units.FAHRENHEIT;
     }
+    this.settingsChanged.next();
+  }
+
+  changeLocationPermission(value: boolean) {
+    this.settings.locationPermission = value;
     this.settingsChanged.next();
   }
 }

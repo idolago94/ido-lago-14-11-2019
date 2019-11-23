@@ -5,6 +5,7 @@ import { ILocation } from 'src/app/interfaces/Ilocation';
 import { ActivatedRoute } from '@angular/router';
 import { catchError } from 'rxjs/operators';
 import { ToastService } from 'src/app/services/toast.service';
+import { SystemService } from 'src/app/services/system.service';
 
 @Component({
   selector: 'app-main',
@@ -17,7 +18,8 @@ export class MainComponent implements OnInit {
 
   constructor( private locationService: LocationsService, 
                private route: ActivatedRoute,
-               private toastService: ToastService ) { }
+               private toastService: ToastService,
+               private systemService: SystemService ) { }
 
   ngOnInit() {
     this.route.params.subscribe((params) => {
@@ -39,9 +41,11 @@ export class MainComponent implements OnInit {
         this.locationService.searchGeoLocation(currentPosition)
         .subscribe((response) => {
           this.currentLocation = response.Key;
+          this.systemService.changeLocationPermission(true);
         },
         (err) => {
           this.toastService.handleError(err);
+          this.systemService.changeLocationPermission(false);
         })
       });
     }, 

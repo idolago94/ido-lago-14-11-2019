@@ -1,0 +1,9 @@
+<div class="box">
+  <div class="fahrenheit unit">°F</div>
+  <div class="toggle-box">
+    <input [checked]="settings.unit == unitOptions.CELSIUS" (click)="unitClick()" type="checkbox" id="toggle" class="checkbox" />
+    <label for="toggle" class="switch"></label> 
+  </div>
+  <div class="celsius unit">°C</div>
+</div>
+
